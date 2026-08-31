@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int i=0,n,key;
+	int a[100];
+	int count = 0;
+	clrscr();
+	printf("\nEnter the Size of the array:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++){
+		printf("\nEnter the Element for index %d:",i);
+		scanf("%d",&a[i]);
+	}
+
+	printf("\nEnter the Searching Element:");
+	scanf("%d",&key);
+
+	for(i=0;i<n;i++){
+		if(a[i]==key){
+			count = 1;
+		}
+	}
+	if(count > 0){
+	printf("Element found");
+	}
+	else{
+
+	printf("Element not found");
+	}
+	getch();
+	return 0;
+}

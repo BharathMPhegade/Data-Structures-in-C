@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int i=0,n,key,found =0;
+	int a[100];
+
+	int low =0,high,mid;
+	clrscr();
+	printf("\nEnter the Size of the array:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++){
+		printf("\nEnter the Element for index %d:",i);
+		scanf("%d",&a[i]);
+	}
+
+	printf("\nEnter the Searching Element:");
+	scanf("%d",&key);
+
+	high = n-1;
+	while(low<=high){
+
+		mid = (low+high)/2;
+		if(a[mid]==key){
+			found = 1;
+			break;
+		}
+		else if(a[mid]<key){
+			low = mid+1;
+		}
+		else{
+			high = mid-1;
+		}
+
+	}
+
+	if(found ==1){
+		printf("Searching Element Found");
+	}
+	else{
+		printf("Searching Element Not Found");
+	}
+	getch();
+	return 0;
+}
